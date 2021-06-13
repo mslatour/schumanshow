@@ -10,6 +10,7 @@ Django==3.2.4
 django-filter==2.4.0
 django-heroku==0.3.1
 django-modelcluster==5.1
+django-storages==1.11.1
 django-taggit==1.4.0
 django-treebeard==4.5.1
 djangorestframework==3.12.4
