@@ -4,50 +4,26 @@
 {% block body_class %}template-homepage{% endblock %}
 
 {% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/topbar.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'css/home_page.css' %}">
 {% endblock extra_css %}
 
 {% block content %}
-    <div class="mdl-layout mdl-js-layout">
-        <header class="mdl-layout__header topbar">
-            <div class="mdl-layout__header-row">
-                <!-- Title -->
-                <span class="mdl-layout-title">The Schuman Show</span>
-                <!-- Add spacer, to align navigation to the right -->
-                <div class="mdl-layout-spacer"></div>
-                <!-- Navigation -->
-                <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link active" href="">About</a>
-                    <a class="mdl-navigation__link" href="">Tickets</a>
-                    <a class="mdl-navigation__link" href="">Videos</a>
-                    <a class="mdl-navigation__link" href="">Cast</a>
-                    <a class="mdl-navigation__link" href="">Updates</a>
-                </nav>
-            </div>
-        </header>
-        <div class="mdl-layout__drawer">
-            <span class="mdl-layout-title">The Schuman Show</span>
-            <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="">About</a>
-                <a class="mdl-navigation__link" href="">Tickets</a>
-                <a class="mdl-navigation__link" href="">Videos</a>
-                <a class="mdl-navigation__link" href="">Cast</a>
-                <a class="mdl-navigation__link" href="">Updates</a>
-            </nav>
-        </div>
-        <main class="mdl-layout__content">
-            {%  image page.splash_image original as splash_image %}
-            <img class="splash-image" src="{{ splash_image.url }}" />
-            <div class="tagline-header">{{ page.tagline }}</div><!--Welcome to The Schuman Show!-->
-            <div class="tagline-subheader">{{ page.sub_tagline }}</div><!-- We are the comedy show the EU has been waiting for, here to burst the Brussels Bubble. -->
-            <div class="content-about">{{ page.body|richtext }}</div>
-                <!--
-                With a monthly show in the heart of the European capital, we bring you the news you didn’t know you missed in a way you won’t forget. We satirize the decision makers and disrupt the narratives with absurd theatrical sketches, witty monologues and catchy songs.
+ <div class="mdl-layout mdl-js-layout">
+    {% include "home/topbar.html" %}
+    <main class="mdl-layout__content">
+        {%  image page.splash_image original as splash_image %}
+        <img class="splash-image" src="{{ splash_image.url }}" />
+        <div class="tagline-header">{{ page.tagline }}</div><!--Welcome to The Schuman Show!-->
+        <div class="tagline-subheader">{{ page.sub_tagline }}</div><!-- We are the comedy show the EU has been waiting for, here to burst the Brussels Bubble. -->
+        <div class="content-about">{{ page.body|richtext }}</div>
+            <!--
+            With a monthly show in the heart of the European capital, we bring you the news you didn’t know you missed in a way you won’t forget. We satirize the decision makers and disrupt the narratives with absurd theatrical sketches, witty monologues and catchy songs.
 <br /><br />
 And for those who can’t get enough, we also spread some serious laughter through our social media channels, to keep you hooked onto EU business like you never knew you would.
 <br /><br />
 So follow us on facebook, twitter, youtube and instagram. And join our show at Le Reservoir, every last Thursday of the month.
 -->
-        </main>
-    </div>
+    </main>
+</div>
 {% endblock content %}

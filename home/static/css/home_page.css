@@ -1,32 +1,3 @@
-.topbar {
-    background-color: #082366;
-    box-shadow: none;
-}
-
-.topbar .mdl-layout-title {
-    color: white;
-}
-
-.topbar .mdl-navigation__link{
-    font-weight: bold;
-    color: white;
-    opacity: 1;
-}
-
-.topbar .mdl-navigation__link.active {
- border-bottom: 1px solid #ffc300;
-}
-
-.mdl-layout__drawer-button {
-    color: #ffc300;
-}
-
-@media screen and (min-width: 1024px) {
-    .mdl-layout__drawer-button {
-        display: none;
-    }
-}
-
 main {
     background: #082366;
     text-align: center;
