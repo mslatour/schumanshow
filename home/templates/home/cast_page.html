@@ -15,7 +15,7 @@
         <div class="content-box">
             <div class="title">{{ page.title }}</div>
             <div class="intro">{{ page.intro|richtext }}</div>
-            <div class="cast-profile-list-box mdl-grid">
+            <div class="mdl-grid">
             {%  for block in page.cast_list %}
                 {%  if block.block_type == 'profile' %}
                     <div class="cast-profile-box mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">

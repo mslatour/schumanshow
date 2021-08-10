@@ -8,7 +8,12 @@
     text-decoration: none;
 }
 
-.topbar .mdl-navigation__link{
+.mdl-layout__drawer .mdl-layout-title {
+    text-decoration: none;
+    color: #082366;
+}
+
+.topbar .mdl-navigation__link {
     font-weight: bold;
     color: white;
     opacity: 1;
