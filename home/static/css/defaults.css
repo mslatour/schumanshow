@@ -36,4 +36,8 @@ main {
     .title {
         display: block;
     }
+
+    .content-box {
+        width: 90%;
+    }
 }
