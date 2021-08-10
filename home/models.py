@@ -1,6 +1,6 @@
 from django.db import models
-from wagtail.admin import blocks
 
+from wagtail.core import blocks
 from wagtail.core.models import Page
 from wagtail.core.fields import RichTextField, StreamField
 from wagtail.images.blocks import ImageChooserBlock
@@ -35,9 +35,9 @@ class CastMemberBlock(blocks.StructBlock):
     first_name = blocks.CharBlock()
     surname = blocks.CharBlock()
     photo = ImageChooserBlock(required=False)
+    job_title = blocks.CharBlock()
     description = blocks.RichTextBlock()
-    twitter = blocks.CharBlock()
-    linkedin = blocks.CharBlock()
+    links = blocks.StreamBlock([('social_link', blocks.StructBlock([('label', blocks.CharBlock()),('url', blocks.URLBlock())]))], required=False)
 
     class Meta:
         icon = 'user'
@@ -85,3 +85,10 @@ class BlogIndexPage(Page):
         blogs = blogs.order_by('first_published_at').reverse()
 
         return blogs
+
+class TicketPage(Page):
+    intro = RichTextField(default='')
+
+    content_panels = Page.content_panels + [
+        FieldPanel('intro'),
+    ]

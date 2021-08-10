@@ -1,6 +1,10 @@
 .topbar {
-    background-color: #082366;
+    background-color: #061947;
     box-shadow: none;
+}
+
+.mdl-layout__drawer {
+    background-color: #061947;
 }
 
 .topbar .mdl-layout-title {
@@ -10,17 +14,26 @@
 
 .mdl-layout__drawer .mdl-layout-title {
     text-decoration: none;
-    color: #082366;
+    color: #ffc300;
 }
 
-.topbar .mdl-navigation__link {
-    font-weight: bold;
+.main-nav .mdl-navigation .mdl-navigation__link {
     color: white;
+    font-size: 20px;
+    font-variant: all-small-caps;
     opacity: 1;
+    font-weight: bold;
 }
 
-.topbar .mdl-navigation__link.active {
-    /*border-bottom: 1px solid #ffc300;*/
+.main-nav .mdl-navigation .mdl-navigation__link:hover {
+    color: #ffc300;
+    background: none;
+}
+
+
+.main-nav .mdl-navigation__link.active {
+    color: #ffc300;
+    border-bottom: thin solid #ffc300;
 }
 
 .topbar .mdl-layout__header-row {

@@ -13,10 +13,12 @@
     {% include "home/topbar.html" %}
     <main class="mdl-layout__content">
         {%  image page.splash_image original as splash_image %}
-        <img class="splash-image" src="{{ splash_image.url }}" />
-        <div class="tagline-header">{{ page.tagline }}</div><!--Welcome to The Schuman Show!-->
-        <div class="tagline-subheader">{{ page.sub_tagline }}</div><!-- We are the comedy show the EU has been waiting for, here to burst the Brussels Bubble. -->
-        <div class="content-about">{{ page.body|richtext }}</div>
+            <div class="content-box">
+            <img class="splash-image" src="{{ splash_image.url }}" />
+            <div class="tagline-header">{{ page.tagline }}</div><!--Welcome to The Schuman Show!-->
+            <div class="tagline-subheader">{{ page.sub_tagline }}</div><!-- We are the comedy show the EU has been waiting for, here to burst the Brussels Bubble. -->
+            <div class="content-about">{{ page.body|richtext }}</div>
+        </div>
             <!--
             With a monthly show in the heart of the European capital, we bring you the news you didn’t know you missed in a way you won’t forget. We satirize the decision makers and disrupt the narratives with absurd theatrical sketches, witty monologues and catchy songs.
 <br /><br />

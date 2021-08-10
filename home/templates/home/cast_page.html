@@ -4,8 +4,9 @@
 {% block body_class %}template-homepage{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/cast_page.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'css/topbar.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/cast_page.css' %}">
+
 {% endblock extra_css %}
 
 {% block content %}
@@ -26,15 +27,15 @@
 
                       <div class="mdl-card__supporting-text">
                             <h2 class="mdl-card__title-text">{{ block.value.first_name }} {{ block.value.surname }}</h2>
+                          <h6 class="mdl-card__subtitle-text">{{  block.value.job_title }}</h6>
                           {{ block.value.description }}
                       </div>
                       <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{  block.value.twitter }}">
-                          Twitter
+                      {%  for link_block in block.value.links %}
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{  link_block.value.url }}">
+                            {{ link_block.value.label }}
                         </a>
-                          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{  block.value.linkedin }}">
-                          LinkedIn
-                        </a>
+                      {%  endfor %}
                       </div>
                     </div>
                 {% else %}
