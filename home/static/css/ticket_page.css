@@ -1,0 +1,10 @@
+.ticket-embed-box {
+    width: 100%;
+    margin-top: 40px;
+    border-radius: 10px;
+    min-height: 0;
+}
+
+.ticket-embed-box .tt-widget-fallback a {
+    color: #082366;
+}
