@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static wagtailcore_tags wagtailimages_tags %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/topbar.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/standard_page.css' %}">
+{% endblock extra_css %}
+
+{% block content %}
+<div class="mdl-layout mdl-js-layout">
+{% include "home/topbar.html" %}
+    <main class="mdl-layout__content">
+        <div class="content-box">
+            <div class="content-about">{{ page.body|richtext }}</div>
+        </div>
+    </main>
+</div>
+{% endblock content %}

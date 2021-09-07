@@ -1,0 +1,21 @@
+main {
+    text-align: center;
+}
+
+.splash-image {
+    max-height: 400px;
+    max-width: 60%;
+}
+
+.content-about p {
+    color: white;
+    line-height: 28px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+@media screen and (max-width: 1024px) {
+    .content-about p {
+        font-size: 18px;
+    }
+}
