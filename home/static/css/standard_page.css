@@ -1,5 +1,10 @@
 main {
     text-align: center;
+    color: white;
+}
+
+a, a:visited {
+    color: white;
 }
 
 .splash-image {
