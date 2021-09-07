@@ -9,6 +9,12 @@ from wagtail.embeds.blocks import EmbedBlock
 from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel
 from wagtail.images.edit_handlers import ImageChooserPanel
 
+class StandardPage(Page):
+    body = RichTextField(default='')
+
+    content_panels = Page.content_panels + [
+        FieldPanel('body'),
+    ]
 
 class HomePage(Page):
     splash_image = models.ForeignKey(
