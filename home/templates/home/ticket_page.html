@@ -15,6 +15,9 @@
         <div class="content-box">
             <div class="title">{{ page.title }}</div>
             <div class="intro">{{ page.intro|richtext }}</div>
+            <div class="subscribe-box">
+                {%  include "home/subscribe_form.html" %}
+            </div>
             <div class="ticket-embed-box mdl-card mdl-shadow--2dp">
                   <div class="mdl-card__title mdl-card--expand">
                       <h2 class="mdl-card__title-text">Buy tickets</h2>
@@ -31,4 +34,5 @@
         </div>
     </main>
 </div>
+
 {% endblock content %}

@@ -8,3 +8,25 @@
 .ticket-embed-box .tt-widget-fallback a {
     color: #082366;
 }
+
+.subscribe-box {
+    border: thin solid white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.subscribe-box .mc-field-group {
+    padding-bottom:  0;
+}
+
+.subscribe-box input {
+    height: 30px;
+}
+
+.subscribe-box .email {
+    width: 300px;
+}
+
+.subscribe-box .response {
+    color: white
+}
